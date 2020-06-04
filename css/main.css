@@ -1,0 +1,895 @@
+/* GENERAL SETTİNGS */
+
+@font-face{
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+body{
+    background-color: white;
+    color: #3f3f3f;
+    font: 14px / 28px  arial;
+    font-family: 'Raleway'  ;
+}
+
+h1 {
+    font-size: 52px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.sectionHeader {
+    background: #550D16;
+    border-bottom: 6px solid #000;
+    height: 60px;
+    color: #fff;
+    display: inline-block;
+    line-height: 60px;
+    font-size: 24px;
+    padding: 5px 40px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 16px;
+    color: #500D16;
+    font-weight: bold;
+}
+
+
+.sectionArea {
+    padding: 80px 0;
+
+}
+/* GRID SETTİNGS */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.featuresBody .container {
+    justify-content: space-between;
+}
+
+.col3 {
+    flex-grow: 1;
+    width: 33.33%;
+}
+
+.engineBody .container {
+    justify-content: space-between;
+}
+
+.col2{
+    flex-grow: 1;
+    width: 50%;
+    padding: 20px;
+}
+
+.col4 {
+    flex-grow: 1;
+    width: 20%;
+}
+
+
+
+
+/* HOME SETTİNGS */
+
+header .logo{
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #95a5a6;
+  
+}
+
+/*header .logo img {
+    display: block;
+    height: 70px;
+}
+*/
+.menu li {
+    float: left;
+}
+
+.menu li a{
+    padding: 27px 17px;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #333;
+    transition: all .5s ease;
+}
+
+/*
+.menu li:last-child a {
+    padding-right: 0;
+}
+*/
+
+.menu li:hover a {
+    background-color: #500D16;
+    color: white;
+} 
+
+#mainSlider {
+    height: 250px;
+    background: url('../img/main-home.jpg') center center no-repeat;
+    /* Fotoğrafı merkezlemeye yarıyor. */
+    background-size: cover;
+    
+
+}
+
+/* Tüm genişliğin hepsini kapsaması için */
+.slider{
+    width: 100%;
+}
+
+/* Arkaplan karartma ve yükleklik ayarı */
+#mainCaption {
+    height: 250px;
+    background: rgb(0,0,0, 0.5);
+    
+}
+
+.caption{
+    /* Rahatca ortalamak için önce bu kullanılır */
+    display: flex;
+    /* Yukardan aşağı doğru sıralar */
+    flex-direction: column;
+    /* Sutünde ortalamayı Sağlar */
+    align-items: center;
+ /* Satırda ortalamayı sağlar */
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+}
+
+.featuresTop {
+    text-align: center;
+}
+
+.item {
+    padding: 10px 20px;
+}
+
+.zoom {
+    position: relative;
+    /* Eleman kutusndan taşan içerik kırpılır ve içeriğin geri kalan kısmı görünmez olur  */
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    /* Dikeyde ortalamak için kullanılır */
+    vertical-align: top;
+}
+
+.zoom img{
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Keskin hoverı yavaşlatıyor */
+    transition: all .5s ease;
+}
+
+.item .itemText {
+    
+    text-align: center;
+    padding-top: 20px;
+    border: 1px solid #500D16;
+}
+
+.item:hover .zoom img {
+    transform: scale(1.25);
+}
+
+.item:hover h3 {
+    color: #fff;
+    transition: all .5s ease;
+}
+
+.item:hover .itemText {
+    background: #550D16;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+.btnDetails {
+    color: #550D16;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid ;
+    transition: all .5s ease;
+}
+
+.item:hover .btnDetails {
+    color: #fff;
+    border: 1px solid #fff;
+   
+}
+
+.itemText p {
+    margin: 20px 0;
+}
+
+#parallax {
+    background: linear-gradient(
+                rgba(0,0,0, .1),
+                rgba(0,0,0, .7)
+                ),
+                url('../img/bar.jpg');
+     background-attachment: fixed;
+     background-size: cover;
+     background-position: center;
+     text-align: center;
+}
+
+#parallax p {
+    color: #fff;
+}
+
+.engineTop {
+    text-align: center;
+}
+
+.engineContainer {
+    position: relative;
+    width: 100%;
+}
+
+.imageOver {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.engineOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(80,13,22, .7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+
+}
+
+.engineContainer:hover .engineOverlay {
+    width: 100%;
+}
+
+.engineText {
+    white-space: nowrap;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.engineContainer:hover .engineOverlay2 {
+    width: 100%;
+}
+
+.engineOverlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 100%0;
+    right: 0;
+    background-color: rgba(80, 13, 22, .7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    
+}
+
+footer {
+    background: #550D16;
+    text-align: center;
+}
+
+.footerItem {
+            padding: 20px;
+}
+
+footer .logoFooter {
+    font-size: 30px;
+    height: 50px;
+    opacity: .5;
+    text-decoration: none;
+    color: #fff;
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer .fab  {
+    font-size: 30px;
+    color: #95a5a6;
+    line-height: 50px;
+    transition: .3s ease;
+}
+
+footer .fas {
+    font-size: 30px;
+    color: #95a5a6;
+    line-height: 50px;
+    transition: .3s ease;
+}
+
+footer .fas:hover {
+    color: red;   
+}
+footer .fab:hover {
+    color: #fff;
+}
+
+footer p {
+    color: #95a5a6;
+    line-height: 20px;
+}
+
+.footerLinks a {
+    text-decoration: none;
+    color: #95a5a6;
+    letter-spacing: 2px;
+    transition: .3s ease;
+}
+
+.footerLinks a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.socialLinks li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+/* FOOD SETTİNGS */
+
+#carsSlider {
+    height:250px;
+    background: url('../img/X.jpg') center center no-repeat;
+    background-size: cover;
+
+}
+
+#carsCaption {
+    height: 250px;
+    background: rgb(0,0,0, 0.4);
+}
+
+#inspect {
+    background-color: #f5f5f5;
+}
+
+.inspectTop {
+    text-align: center;
+}
+
+.inspectBody .col2 {
+    display: flex;
+}
+
+.inspectImage {
+    width: 40%;
+
+}
+
+.inspectImage img {
+    width: 100%;
+    height: auto;
+}
+
+.inspectText {
+    width: 60%;
+    padding-left: 10px;
+}
+
+.date {
+    color: #333;
+    font-size: 12px;
+    font-style: italic;
+}
+
+h4 {
+    color: #500D16;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.inspectText a {
+    float: right;
+    text-decoration: none;
+    color: #500D16;
+}
+
+.inspectText a:hover {
+    text-decoration: underline;
+}
+
+.projectXTop {
+    text-align: center;
+}
+
+#projectX .containerFluid {
+    height: 500;
+    background: url('../img/main-home.jpg') center center no-repeat ;
+    background-size: cover;
+}
+
+.captionPX {
+    display: flex;
+    background: rgba(0,0,0, .3);
+    width: 100%;
+    height: 500px;
+}
+
+.projectXInfo {
+    position: relative;
+    padding: 5%;
+    margin: 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.projectXTitle {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.projectXBTN {
+    background-color: #500D16;
+    cursor: pointer;
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    margin-top: 20px;
+    transition: all .5s ease ;
+
+}
+
+.projectXBTN:hover {
+    background-color: #fff;
+    color: #500D16;
+}
+
+.projectXText {
+    color: #fff;
+}
+
+.projectXHighlight  {
+    display: inline-block;
+    background-color: #500D16;
+    padding: 30px;
+}
+
+.containerFluid .col2{
+    padding: 0;
+}
+
+.prjectXDetail {
+    color: #fff;
+}
+
+/* ABOUT SETTINGS */
+
+#aboutSlider {
+    height:250px;
+    background: url('../img/X.jpg') center center no-repeat;
+    background-size: cover;
+
+}
+
+#aboutCaption {
+    height: 250px;
+    background: rgb(0,0,0, 0.4);
+}
+
+#ourHistory {
+    background-color: #f5f5f5;
+}
+
+.ourHistoryTop {
+    text-align: center;
+}
+
+.ourHistoryBody .containerFluid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ourHistoryBody .col2 {
+    display: flex;
+}
+
+.ourHistoryDate {
+    flex: 1;
+    text-align: center;
+    background-color: #500D16;
+    color: #fff;
+}
+
+.ourHistoryDate p {
+    font-size: 30px;
+    letter-spacing: 2px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.ourHistoryImage {
+    flex: 2;
+} 
+
+.ourHistoryImage img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.ourHistoryText {
+    flex: 3;
+    margin-left: 10px;
+}
+
+.ourHistoryText p {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.teamTop {
+    text-align: center;
+}
+
+.teamBody .containerFluid {
+    display: flex;
+    width: 100%;
+}
+
+.teamMember {
+    position: relative;
+    width: 100%;
+}
+
+.teamMemberImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.teamMemberOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-color: #500D16;
+    transition: .5s ease;
+}
+
+.teamMember:hover .teamMemberOverlay {
+    opacity: 0;
+}
+
+.teamMember:hover .teamMemberInfo {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.teamTitle {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.teamMemberInfo{
+    color: #fff;
+    background-color: rgba(80,13,22, .7);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s ease;
+}
+
+.memberSocialLinks{
+    text-align: center;
+}
+
+.memberSocialLinks li {
+    display: inline;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.memberSocialLinks .fab {
+    color: #fff;
+}
+
+
+/* CONTACT SETTINGS */
+
+#contactSlider {
+    height:250px;
+    background: url('../img/X.jpg') center center no-repeat;
+    background-size: cover;
+
+}
+
+#contactCaption {
+    height: 250px;
+    background: rgb(0,0,0, 0.4);
+}
+
+#gallery {
+    background-color: #f5f5f5;
+}
+
+.galleryTop {
+    text-align: center;
+}
+
+.gallerySlider {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gallerySliderItem {
+    width: 300%;
+    position: relative;
+    left: 0;
+    animation: slideAnimation 20s infinite;
+}
+
+.gallerySliderItem img {
+    width: 33.33%;
+    float: left;
+    height: auto;
+}
+
+@keyframes slideAnimation {
+    0% {left: 0;}
+    25% {left: -100%;}
+    50% {left: -200%;}
+    75% {left: -100%;}
+    100% {left: 0;}
+}
+
+.contactTop {
+    text-align: center;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contactForm {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.formItem {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.formShape {
+    color: #fff;
+    float: left;
+    background: #500D16;
+    padding: 8px;
+    width: 8%;
+    text-align: center;
+}
+
+.formField {
+    color: #fff;
+    background: #500D16;
+    padding: 15.5px;
+    width: 92%;
+    display: block;
+    font-size: 14px;
+}
+
+.formBtn {
+    display: block;
+    border: none;
+    background-color: #500D16;
+    color: #fff;
+    padding: 12px 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.formBtn:hover {
+    background: #841916;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 960px){
+        .caption h1 {
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        footer .fab {
+            font-size: 24px;
+        }
+
+        footer h3 {
+            font-size: 16px;
+        }
+
+        .inspectBody .container{
+            flex-direction: column;
+        }
+
+        .inspectBody .container .col2 {
+            width: 100%;
+        }
+
+        .ourHistoryBody .col2 {
+            flex-direction: column;
+            width: 100%;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+}
+
+
+@media screen and (max-width: 720px){
+    header .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }  
+
+
+    header .logo{
+        margin: 0 auto;
+    }
+
+
+    .caption h1 {
+        color: red;
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .featuresBody .container {
+        flex-direction: column;
+    }
+
+    .featuresBody .container .col3{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .engineBody .container {
+        flex-direction: column;
+
+    }
+
+    .engineBody .container .col2 {
+        flex-direction: column;
+        width: 80%;
+        padding-right: 0;
+        padding-left: 0;
+        margin: 0 auto;
+        
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .col3 {
+        width: 100%;
+    }
+
+    .sectionHeader {
+        font-size: 24px;
+    }
+
+    .inspectBody .container .col2 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .teamMemberInfo {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .teamTitle {
+        font-size: 14px;
+    }
+
+    .formShape {
+        display: none;
+    }
+
+
+
+}
+
+@media screen and (max-width: 540px){
+  
+    .caption h1 {
+        color: yellow;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+
+    .featuresBody .container .col3{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .engineBody .container {
+        flex-direction: column;
+
+    }
+
+    .engineBody .container .col2 {
+        flex-direction: column;
+        width: 100%;
+       
+        
+    }
+
+    
+
+    .sectionHeader {
+        font-size: 20px;
+    }
+
+    .contactForm {
+        width: 80%;
+    }
+
+
+
+
+}
