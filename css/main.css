@@ -365,14 +365,14 @@ footer p {
 
 /* FOOD SETTİNGS */
 
-#carsSlider {
+#foodsSlider {
     height:250px;
     background: url('../img/X.jpg') center center no-repeat;
     background-size: cover;
 
 }
 
-#carsCaption {
+#foodsCaption {
     height: 250px;
     background: rgb(0,0,0, 0.4);
 }
